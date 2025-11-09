@@ -63,3 +63,9 @@ group :development do
   # gem "spring"
 end
 
+# Markdown処理とGitHub連携のためのGem
+gem 'redcarpet'              # Markdown→HTML変換
+gem 'front_matter_parser'    # Front Matter解析 (Markdownのメタデータ)
+gem 'octokit'                # GitHub API連携
+gem 'dotenv-rails', groups: [:development, :test] # 環境変数管理
+
