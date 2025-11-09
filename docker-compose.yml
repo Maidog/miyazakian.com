@@ -23,5 +23,14 @@ services:
     environment:
       DATABASE_URL: postgresql://miyazakian:password@db:5432/miyazakian_development
 
+  css:
+    build: .
+    tty: true
+    command: bash -c "bundle install && bin/rails tailwindcss:watch"
+    volumes:
+      - .:/app
+    depends_on:
+      - app
+
 volumes:
   postgres_data:
